@@ -3,10 +3,10 @@
 import re,sys,os
 
 def judge(line,pattern):
-    return re.match(pattern)
+    return re.match(pattern,line)
 
 def isSpaceLine(line):
-    return judge(line,'^\s*$')==true
+    return judge(line,r'^\s*$')
 
 def isCommentLine(line):
     return judge(line,'^#')
